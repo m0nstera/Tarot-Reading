@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image'
 import TarotCardList from './TarotCardList.jsx';
 import Search from './Search.jsx';
 import DisplayOne from './DisplayOne.jsx';
@@ -69,6 +70,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>gain insight into the past, present, or future</h1>
+        <Image src="https://i5.walmartimages.com/asr/366e8cb3-08a9-4ba0-8f7a-d04d0a5a2398_1.fe42737149d0bdaafa44fb0ec7192d8c.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff" fluid />
+        <Image src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/11-hands-on-crystal-ball-and-cryptocurrency-allan-swart.jpg" fluid />
+
         <Container className="tarot-container">
           <Search
             searchName={searchName}
@@ -77,7 +81,7 @@ class App extends React.Component {
           <Button
             variant="secondary"
             onClick={this.clickOne}
-          >Click</Button>
+          >Let fate generate a card for you!</Button>
           <div>
             <DisplayOne
               card={cardToDisplay}

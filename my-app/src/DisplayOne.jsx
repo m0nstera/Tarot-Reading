@@ -5,7 +5,7 @@ const DisplayOne = ({card}) => {
     <div>
       <div className="highlit">
         {card === null
-        ? "pick a card!"
+        ? ""
         : <><span>{card.name}</span>
         <p>{card.desc}</p>
         <p>{card.meaning_rev}</p>
