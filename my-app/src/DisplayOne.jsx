@@ -1,16 +1,12 @@
 import React from 'react';
+import TarotCard from './TarotCard.jsx';
 
 const DisplayOne = ({card}) => {
   return (
     <div>
-      <div className="highlit">
-        {card === null
-        ? ""
-        : <><span>{card.name}</span>
-        <p>{card.desc}</p>
-        <p>{card.meaning_rev}</p>
-        <p>{card.meaning_up}</p></>}
-      </div>
+      {<TarotCard
+      card={card}
+      />}
     </div>
   );
 };
