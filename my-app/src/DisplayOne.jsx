@@ -3,7 +3,7 @@ import TarotCard from './TarotCard.jsx';
 
 const DisplayOne = ({card}) => {
   return (
-    <div>
+    <div className="display-one">
       {<TarotCard
         card={card}
       />}

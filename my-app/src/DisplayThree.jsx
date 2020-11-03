@@ -1,17 +1,18 @@
 import React from 'react';
-import TarotCard from './TarotCard.jsx'
+import TarotCard from './TarotCard.jsx';
+import Container from 'react-bootstrap/Container';
 
 const DisplayThree = ({cardListToDisplay}) => {
 
   return (
     <div>
-      <div>
+      <Container>
         {cardListToDisplay === null
         ? ""
         : cardListToDisplay.map((card) => <TarotCard
           card={card}
           />)}
-      </div>
+      </Container>
     </div>
   );
 };
