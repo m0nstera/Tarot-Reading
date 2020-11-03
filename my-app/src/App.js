@@ -100,6 +100,7 @@ class App extends React.Component {
           <div>
             <DisplayOne
               card={cardToDisplay}/>
+              <br></br>
             <DisplayThree
               cardListToDisplay={cardListToDisplay}/>
             {this.state.showDeck
