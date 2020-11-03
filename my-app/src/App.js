@@ -4,11 +4,8 @@ import React from 'react';
 import axios from 'axios';
 import shuffle from 'lodash/shuffle';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
-import Col from 'react-bootstrap/Col'
-// import "~slick-carousel/slick/slick.css";
-// import "~slick-carousel/slick/slick-theme.css";
 import TarotCardList from './TarotCardList.jsx';
 import photos from './photos.js';
 import Search from './Search.jsx';
@@ -107,7 +104,7 @@ class App extends React.Component {
             <DisplayThree
               cardListToDisplay={cardListToDisplay}
               />
-            {this.state.showDeck
+            {showDeck
               ? <TarotCardList cardList={filteredTarot}/>
               : <div></div>}
           </div>

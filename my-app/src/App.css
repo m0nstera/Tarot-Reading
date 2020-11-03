@@ -18,6 +18,9 @@ body {
   font-family: 'Crimson Text', serif;
   border-radius: 10px;
 }
+.container-div {
+  width: 800px;
+}
 
 .crystal-ball-img {
   display: block;
@@ -30,51 +33,11 @@ body {
   align-items: center;
   justify-content: center;
 }
-/*
-.one-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;  border-radius: 10px;
-  background-color: transparent;
-  width: 200px;
-  height: 350px;
-  perspective: 1000px;
+.btn-cardlist:hover, .btn-draw-one:hover, .btn-draw-three:hover {
+  color: rgb(14, 12, 12) !important;
+  background-color: white !important;
 }
-.flip-box-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;  border-radius: 10px;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-} */
-/* .one-card:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-.card-front, .card-back {
-  border-radius: 10px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.card-front {
-  border-radius: 10px;
-  background-color: white;
-  color: black;
-}
-.card-back {
-  background-color: black;
-  color: white;
-  transform: rotateY(180deg);
-} */
+
 .one-card {
   display: flex;
   flex-direction: column;
@@ -84,16 +47,20 @@ body {
 }
 .card-pic {
   border-radius: 10px;
+}
 
+/* .card-modal {
+} */
+
+.carousel-of-random {
+  padding-bottom: 25px;
 }
 
 span {
   font-style: oblique;
 }
 
-.container-div {
-  width: 800px;
-}
+
 
 
 
@@ -131,11 +98,6 @@ span {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -143,18 +105,12 @@ span {
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {

@@ -16,11 +16,13 @@ const TarotCard = ({card}) => {
         width="240px"
         height="390px"/>
       <br></br>
-      <Button id="addq-btn"variant="outline-dark" size="md"
+      <Button
+        className="click-info"variant="outline-dark" size="md"
         onClick={handleShow}
       >click for more
       </Button>
       <Modal
+        className="card-modal"
         centered
         show={show}
         onHide={handleClose}>
