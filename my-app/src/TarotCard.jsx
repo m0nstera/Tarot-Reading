@@ -1,35 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Image from 'react-bootstrap/Image'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const TarotCard = ({card}) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return card === false ? (<div></div>) : (
     <div className="one-card">
       <h5>{card.name}</h5>
-        <Image className="card-pic"
-          src={card.url}
-          width="240px"
-          height="390px"/>
-        <p>{card.desc}</p>
-        <p><span>Light: </span>{card.meaning_up}</p>
-        <p><span>Shadow: </span> {card.meaning_rev}</p>
+      <Image className="card-pic"
+        src={card.url}
+        width="240px"
+        height="390px"/>
+      <br></br>
+      <Button id="addq-btn"variant="outline-dark" size="md"
+        onClick={handleShow}
+      >click for more
+      </Button>
+      <Modal
+        centered
+        show={show}
+        onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title id="card-modal">
+            <h6>{card.name}</h6>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>{card.desc}</p>
+          <p><span>Light: </span>{card.meaning_up}</p>
+          <p><span>Shadow: </span> {card.meaning_rev}</p>
+        </Modal.Body>
+      </Modal>
     </div>
-  // <div class="one-card">
-  //   <div class="flip-box-inner">
-  //     <div className="card-front">
-  //       <h5>{card.name}</h5>
-  //       <Image src={card.url}
-  //       className="one-card-img"
-  //       width="200px" height="350px"
-  //       />
-  //     </div>
-  //     <div className="card-back" >
-  //       <p>{card.desc}</p>
-  //       <p><span>Light: </span>{card.meaning_up}</p>
-  //       <p><span>Shadow: </span> {card.meaning_rev}</p>
-  //     </div>
-  //   </div>
-  // </div>
   );
 };
 

@@ -13,7 +13,7 @@ const DisplayThree = ({cardListToDisplay}) => {
       <Container>
         <Carousel className="carousel-of-random">
           {cardListToDisplay.map(card =>
-          <Carousel.Item interval={null}>
+          <Carousel.Item interval={undefined}>
             <TarotCard
               card={card}/>
           </Carousel.Item>)}
