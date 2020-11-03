@@ -4,10 +4,11 @@ import Form from 'react-bootstrap/Form';
 const Search = ({search, handleSearch}) => {
   return (
     <div>
-      <Form.Group controlId="form.ControlTextarea">
+      <Form.Group controlId="search-area">
         <Form.Control
           as="textarea"
-          placeholder="search for insight and answers"
+          size="lg"
+          placeholder="search for perspective"
           rows="1"
           value={search}
           onChange={handleSearch}

@@ -5,7 +5,7 @@ const DisplayThree = ({cardListToDisplay}) => {
 
   return (
     <div>
-      <div className="highlit2">
+      <div>
         {cardListToDisplay === null
         ? ""
         : cardListToDisplay.map((card) => <TarotCard

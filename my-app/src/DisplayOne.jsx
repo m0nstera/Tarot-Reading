@@ -5,7 +5,7 @@ const DisplayOne = ({card}) => {
   return (
     <div>
       {<TarotCard
-      card={card}
+        card={card}
       />}
     </div>
   );

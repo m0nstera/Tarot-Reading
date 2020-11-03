@@ -79,9 +79,9 @@ class App extends React.Component {
       <div>
         <Container className="tarot-container">
           <h1>gain insight into the past, present, or future</h1>
-          {/* <Col> */}
-          <Image src="https://i5.walmartimages.com/asr/366e8cb3-08a9-4ba0-8f7a-d04d0a5a2398_1.fe42737149d0bdaafa44fb0ec7192d8c.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff" className="crystal-ball-img" width="400" height="400" />
-          {/* </Col> */}
+          <Image
+            src="https://i5.walmartimages.com/asr/366e8cb3-08a9-4ba0-8f7a-d04d0a5a2398_1.fe42737149d0bdaafa44fb0ec7192d8c.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff" className="crystal-ball-img"
+            width="400" height="400" />
           <Search
             search={search}
             handleSearch={this.handleSearch} />
