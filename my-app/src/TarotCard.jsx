@@ -11,7 +11,8 @@ const TarotCard = ({card}) => {
   return card === false ? (<div></div>) : (
     <div className="one-card">
       <h5>{card.name}</h5>
-      <Image className="card-pic"
+      <Image
+        className="card-pic"
         src={card.url}
         width="240px"
         height="390px"/>
@@ -19,7 +20,7 @@ const TarotCard = ({card}) => {
       <Button
         className="click-info"variant="outline-dark" size="md"
         onClick={handleShow}
-      >click for more
+      >click for details
       </Button>
       <Modal
         className="card-modal"

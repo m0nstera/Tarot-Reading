@@ -4,14 +4,14 @@ import React from 'react';
 import axios from 'axios';
 import shuffle from 'lodash/shuffle';
 import Container from 'react-bootstrap/Container';
-// import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
 import TarotCardList from './TarotCardList.jsx';
 import photos from './photos.js';
 import Search from './Search.jsx';
+import Buttons from './Buttons.jsx';
 import DisplayOne from './DisplayOne.jsx';
 import DisplayThree from './DisplayThree.jsx';
-import Buttons from './Buttons.jsx';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -50,7 +50,8 @@ class App extends React.Component {
   }
 
   clickOne() {
-    let card = this.state.cardList[Math.floor(Math.random() * 78)];
+    let cardList = this.state.cardList;
+    let card = cardList[Math.floor(Math.random() * 78)];
     this.setState({
       cardToDisplay: card
     });

@@ -7,8 +7,8 @@ const Search = ({search, handleSearch}) => {
       <Form.Group controlId="search-area">
         <Form.Control
           as="textarea"
-          size="lg"
           placeholder="search for perspective"
+          size="lg"
           rows="1"
           value={search}
           onChange={handleSearch}

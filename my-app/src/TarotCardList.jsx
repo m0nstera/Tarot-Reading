@@ -4,11 +4,10 @@ import TarotCard from './TarotCard.jsx'
 const TarotCardList = ({cardList}) => {
   const mappedList = cardList.map((card, i) => <TarotCard
   card={card}
-  key={i}
-/>);
+  key={i} />);
 
   return (
-    <div>
+    <div className="entire-list">
       {mappedList}
     </div>
   );
