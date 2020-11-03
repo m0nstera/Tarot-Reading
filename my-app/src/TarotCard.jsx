@@ -15,7 +15,8 @@ const TarotCard = ({card}) => {
         className="card-pic"
         src={card.url}
         width="240px"
-        height="390px"/>
+        height="390px"
+        onClick={handleShow}/>
       <br></br>
       <Button
         className="click-info"variant="outline-dark" size="md"
