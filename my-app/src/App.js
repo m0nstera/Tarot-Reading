@@ -62,7 +62,8 @@ class App extends React.Component {
   clickThree() {
     let threeCards = shuffle(this.state.cardList).slice(-3);
     this.setState({
-      cardListToDisplay: threeCards
+      cardListToDisplay: threeCards,
+      cardToDisplay: false,
     });
   }
 

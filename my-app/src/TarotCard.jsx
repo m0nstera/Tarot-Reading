@@ -6,7 +6,8 @@ const TarotCard = ({card}) => {
   return card === false ? (<div></div>) : (
     <div className="one-card">
       <h5>{card.name}</h5>
-        <Image src={card.url}
+        <Image className="card-pic"
+          src={card.url}
           width="200px"
           height="350px"/>
         <p>{card.desc}</p>
