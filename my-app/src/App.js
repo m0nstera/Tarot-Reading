@@ -76,7 +76,7 @@ class App extends React.Component {
       card.meaning_up.toLowerCase().includes(search.toLowerCase()))
       : filteredTarot = cardList;
     return (
-      <Col fluid sm={12} md={12} lg={12} className="container-div">
+      <div sm={12} md={12} lg={12}className="container-div">
         <Container className="tarot-container">
           <h1>gain insight into the past, present, or future</h1>
           <Image
@@ -85,7 +85,6 @@ class App extends React.Component {
           <Search
             search={search}
             handleSearch={this.handleSearch} />
-
           <Button
             variant="dark"
             onClick={this.toggleDeckVisability}
@@ -98,19 +97,17 @@ class App extends React.Component {
             variant="dark"
             onClick={this.clickThree}
           >Three-card reading</Button>
-          <div className="display-one-three">
+          <div>
             <DisplayOne
-              card={cardToDisplay}
-            />
+              card={cardToDisplay}/>
             <DisplayThree
-              cardListToDisplay={cardListToDisplay}
-            />
-          {this.state.showDeck ? <TarotCardList
-            cardList={filteredTarot}
-            /> : <div></div>}
+              cardListToDisplay={cardListToDisplay}/>
+            {this.state.showDeck
+              ? <TarotCardList cardList={filteredTarot}/>
+              : <div></div>}
           </div>
         </Container>
-      </Col>
+      </div>
     );
   };
 };
