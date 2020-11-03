@@ -1,16 +1,20 @@
 import './App.css'
 import React from 'react';
+// import Slider from "react-slick";
 import axios from 'axios';
 import shuffle from 'lodash/shuffle';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
 import Col from 'react-bootstrap/Col'
+// import "~slick-carousel/slick/slick.css";
+// import "~slick-carousel/slick/slick-theme.css";
 import TarotCardList from './TarotCardList.jsx';
 import photos from './photos.js';
 import Search from './Search.jsx';
 import DisplayOne from './DisplayOne.jsx';
 import DisplayThree from './DisplayThree.jsx';
+import Buttons from './Buttons.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +31,7 @@ class App extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.clickOne = this.clickOne.bind(this);
     this.clickThree = this.clickThree.bind(this);
+    this.clickPhoto = this.clickPhoto.bind(this);
   }
   componentDidMount() {
     this.getAllCards();
@@ -67,6 +72,10 @@ class App extends React.Component {
     });
   }
 
+  clickPhoto() {
+    this.setState();
+  }
+
   render() {
     const {cardList, search, cardToDisplay, cardListToDisplay, showDeck} = this.state;
     let filteredTarot;
@@ -86,24 +95,18 @@ class App extends React.Component {
           <Search
             search={search}
             handleSearch={this.handleSearch} />
-          <Button
-            variant="dark"
-            onClick={this.toggleDeckVisability}
-          >Explore the deck</Button>
-          <Button
-            variant="dark"
-            onClick={this.clickOne}
-          >Let fate choose a card for you!</Button>
-          <Button
-            variant="dark"
-            onClick={this.clickThree}
-          >Three-card reading</Button>
+          <Buttons
+            toggleDeckVisability={this.toggleDeckVisability}
+            clickOne={this.clickOne}
+            clickThree={this.clickThree}
+            />
           <div>
             <DisplayOne
               card={cardToDisplay}/>
               <br></br>
             <DisplayThree
-              cardListToDisplay={cardListToDisplay}/>
+              cardListToDisplay={cardListToDisplay}
+              />
             {this.state.showDeck
               ? <TarotCardList cardList={filteredTarot}/>
               : <div></div>}

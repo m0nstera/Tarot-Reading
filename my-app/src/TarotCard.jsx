@@ -8,8 +8,8 @@ const TarotCard = ({card}) => {
       <h5>{card.name}</h5>
         <Image className="card-pic"
           src={card.url}
-          width="200px"
-          height="350px"/>
+          width="240px"
+          height="390px"/>
         <p>{card.desc}</p>
         <p><span>Light: </span>{card.meaning_up}</p>
         <p><span>Shadow: </span> {card.meaning_rev}</p>

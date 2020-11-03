@@ -24,6 +24,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /*
 .one-card {
   display: flex;
