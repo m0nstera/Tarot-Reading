@@ -5,12 +5,12 @@ import axios from 'axios';
 import shuffle from 'lodash/shuffle';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image'
-import TarotCardList from './TarotCardList.jsx';
+import TarotCardList from './components/TarotCardList.jsx';
 import photos from './photos.js';
-import Search from './Search.jsx';
-import Buttons from './Buttons.jsx';
-import DisplayOne from './DisplayOne.jsx';
-import DisplayThree from './DisplayThree.jsx';
+import Search from './components/Search.jsx';
+import Buttons from './components/Buttons.jsx';
+import DisplayOne from './components/DisplayOne.jsx';
+import DisplayThree from './components/DisplayThree.jsx';
 
 
 class App extends React.Component {
