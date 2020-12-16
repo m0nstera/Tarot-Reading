@@ -12,7 +12,6 @@ import Buttons from './components/Buttons.jsx';
 import DisplayOne from './components/DisplayOne.jsx';
 import DisplayThree from './components/DisplayThree.jsx';
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
