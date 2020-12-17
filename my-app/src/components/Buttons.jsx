@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
-const Buttons = ({toggleDeckVisability, clickOne, clickThree}) => {
+const Buttons = ({toggleDeckVisability, clickOneCard, clickThree}) => {
   return (
     <Container className="btn-container">
       <Button
@@ -15,7 +15,7 @@ const Buttons = ({toggleDeckVisability, clickOne, clickThree}) => {
         className="btn-draw-one"
         size="lg"
         variant="dark"
-        onClick={clickOne}
+        onClick={clickOneCard}
       >Let fate choose a card for you!</Button>
       <Button
         className="btn-draw-three"

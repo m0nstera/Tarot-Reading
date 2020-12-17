@@ -25,7 +25,7 @@ class App extends React.Component {
     this.getAllCards = this.getAllCards.bind(this);
     this.toggleDeckVisability = this.toggleDeckVisability.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    this.clickOne = this.clickOne.bind(this);
+    this.clickOneCard = this.clickOneCard.bind(this);
     this.clickThree = this.clickThree.bind(this);
     this.clickPhoto = this.clickPhoto.bind(this);
   }
@@ -48,7 +48,7 @@ class App extends React.Component {
     this.setState({search: e.target.value.toLowerCase()});
   }
 
-  clickOne() {
+  clickOneCard() {
     let cardList = this.state.cardList;
     let card = cardList[Math.floor(Math.random() * 78)];
     this.setState({
@@ -94,7 +94,7 @@ class App extends React.Component {
             handleSearch={this.handleSearch} />
           <Buttons
             toggleDeckVisability={this.toggleDeckVisability}
-            clickOne={this.clickOne}
+            clickOneCard={this.clickOneCard}
             clickThree={this.clickThree}
             />
           <div>
