@@ -1,87 +1,64 @@
 body {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  font-family: 'Crimson Text', serif;
+  background-image: url("https://cdn.shopify.com/s/files/1/0874/7954/products/dreams-of-gaia-tarot-14180_250x.jpg?v=1571438644");
+  background-attachment: fixed;
 }
 
 .tarot-container {
-  margin-top: 50px;
-}
-
-h1 {
-  font-family: 'Crimson Text', serif;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20% 30px;
+  padding-bottom: 20px;
+  background-color: white;
+  opacity: 0.94;
+  font-family: 'Crimson Text', serif;
+  border-radius: 10px;
+  width: 800px;
 }
 
 .crystal-ball-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  opacity: .99;
 }
 
-.search-area {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-cardlist:hover, .btn-draw-one:hover, .btn-draw-three:hover {
+  color: rgb(14, 12, 12) !important;
+  background-color: white !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.one-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 20%;
+}
+.card-pic {
+  border-radius: 12px;
+  opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.entire-list {
+  height: 60vh;
+  overflow: scroll;
+  padding-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.carousel-of-random {
+  padding-bottom: 25px;
+}
+
+span {
+  font-style: oblique;
+}
