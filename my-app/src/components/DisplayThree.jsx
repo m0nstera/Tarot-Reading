@@ -1,7 +1,7 @@
 import React from 'react';
-import TarotCard from './TarotCard.jsx';
-import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel'
+import Container from 'react-bootstrap/Container';
+import TarotCard from './TarotCard.jsx';
 
 const DisplayThree = ({cardListToDisplay}) => {
 
@@ -13,16 +13,16 @@ const DisplayThree = ({cardListToDisplay}) => {
       <Container>
         <Carousel className="carousel-of-random">
           {cardListToDisplay.map(card =>
-          <Carousel.Item
-            // interval={undefined}
-            autoPlay={false}
-            // interval={5000}
-            controls={true}
-            indicators={true}
+            <Carousel.Item
+              autoPlay={false}
+              controls={true}
+              indicators={true}
             >
-            <TarotCard
-              card={card}/>
-          </Carousel.Item>)}
+              <TarotCard
+                card={card}
+              />
+            </Carousel.Item>
+          )}
         </Carousel>
       </Container>
     </div>
