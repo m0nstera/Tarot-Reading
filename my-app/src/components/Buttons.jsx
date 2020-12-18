@@ -1,8 +1,9 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 
 const Buttons = ({toggleDeckVisability, clickOneCard, clickThree}) => {
+
   return (
     <Container className="btn-container">
       <Button
